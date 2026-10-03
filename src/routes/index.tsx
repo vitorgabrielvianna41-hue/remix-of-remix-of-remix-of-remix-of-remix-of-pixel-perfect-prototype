@@ -476,12 +476,6 @@ function Index() {
                 </span>
               )}
               <h3 className="text-2xl">{plan.name}</h3>
-              <div className="mt-2">
-                <span className="font-display block text-xl text-muted-foreground line-through decoration-destructive decoration-2">
-                  {plan.oldPrice}
-                </span>
-                <p className="font-display text-5xl text-primary">{plan.price}</p>
-              </div>
               <ul className="mt-6 flex-1 space-y-3">
                 {plan.items.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-card-foreground">
