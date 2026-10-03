@@ -475,21 +475,6 @@ function Index() {
         </div>
       </Section>
 
-      {/* O QUE VOCÊ RECEBE */}
-      <Section id="entregaveis">
-        <SectionTitle>UM GUIA PARA NÃO ENTRAR EM UMA CASA DE APOSTA CHINESA ÀS CEGAS</SectionTitle>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {DELIVERABLES.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-xl border border-border bg-card p-6 shadow-card transition-colors hover:border-primary/50"
-            >
-              <span className="inline-flex size-11 items-center justify-center rounded-lg bg-violet-gradient">
-                <item.icon className="size-5 text-secondary-foreground" aria-hidden="true" />
-              </span>
-              <h3 className="mt-4 text-xl">{item.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{item.text}</p>
-            </article>
           ))}
         </div>
       </Section>
