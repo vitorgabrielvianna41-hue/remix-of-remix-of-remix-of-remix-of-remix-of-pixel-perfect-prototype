@@ -485,6 +485,9 @@ function Index() {
                 ))}
               </ul>
               <div className="mt-8 text-center">
+                <span className="font-display block text-xl text-muted-foreground line-through decoration-destructive decoration-2">
+                  {plan.oldPrice}
+                </span>
                 <p className="font-display text-5xl font-extrabold tracking-tight text-foreground">
                   {plan.price}
                 </p>
