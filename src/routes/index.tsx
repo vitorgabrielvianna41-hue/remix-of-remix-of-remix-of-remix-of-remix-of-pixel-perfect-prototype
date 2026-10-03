@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  BookOpen,
   Calculator,
   CheckCircle2,
   FileSearch,
@@ -60,34 +59,6 @@ const DELIVERY_STEPS = [
     icon: Zap,
     title: "ACESSO IMEDIATO",
     text: "Também é possível abrir todo o conteúdo na hora, na tela que aparece logo após a confirmação do pagamento.",
-  },
-];
-
-const DELIVERABLES = [
-  {
-    icon: BookOpen,
-    title: "GUIA PRINCIPAL - METODO CPA",
-    text: "Como escolher casas, bônus e requisitos.",
-  },
-  {
-    icon: ListChecks,
-    title: "Checklist de análise",
-    text: "Itens para conferir antes de qualquer depósito.",
-  },
-  {
-    icon: Calculator,
-    title: "Planilha de cálculo",
-    text: "Compare depósito, rollover, limite de saque e risco potencial.",
-  },
-  {
-    icon: BookOpen,
-    title: "Guia de termos",
-    text: "Entenda rollover, odd, elegibilidade, wagering, cashback e limite de saque.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Checklist de segurança",
-    text: "Como verificar plataforma, domínio, suporte e regras de retirada.",
   },
 ];
 
@@ -475,24 +446,6 @@ function Index() {
         </div>
       </Section>
 
-      {/* O QUE VOCÊ RECEBE */}
-      <Section id="entregaveis">
-        <SectionTitle>UM GUIA PARA NÃO ENTRAR EM UMA CASA DE APOSTA CHINESA ÀS CEGAS</SectionTitle>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {DELIVERABLES.map((item) => (
-            <article
-              key={item.title}
-              className="rounded-xl border border-border bg-card p-6 shadow-card transition-colors hover:border-primary/50"
-            >
-              <span className="inline-flex size-11 items-center justify-center rounded-lg bg-violet-gradient">
-                <item.icon className="size-5 text-secondary-foreground" aria-hidden="true" />
-              </span>
-              <h3 className="mt-4 text-xl">{item.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
 
       {/* BÔNUS DO PLANO COMPLETO */}
       <Section id="bonus">
