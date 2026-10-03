@@ -274,6 +274,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 function Index() {
   return (
+    <>
     <main className="min-h-screen overflow-x-hidden bg-background">
       {/* FAIXA - TOPO */}
       <div className="border-b border-primary/30 bg-primary/10 py-3">
