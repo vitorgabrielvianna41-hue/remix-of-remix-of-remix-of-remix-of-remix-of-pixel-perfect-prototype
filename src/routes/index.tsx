@@ -184,6 +184,25 @@ const PAIN_POINTS = [
   },
 ];
 
+const FAQ = [
+  {
+    q: "Vou conseguir sacar o bônus?",
+    a: "Sim, desde que você cumpra todas as regras da promoção, passe pela verificação da conta e respeite os limites e as políticas da plataforma. O saque está sujeito às condições estabelecidas pela própria plataforma.",
+  },
+  {
+    q: "Posso perder o dinheiro depositado?",
+    a: "Não, com o nosso metodo, a taxa de perca é 0%.",
+  },
+  {
+    q: "Preciso apostar para liberar o bônus?",
+    a: "Em muitas promoções existem requisitos de rollover ou volume mínimo. O valor varia conforme as regras de cada oferta e deve ser conferido antes do depósito.",
+  },
+  {
+    q: "Posso usar várias contas?",
+    a: "Pode, mas com sabedoria pro seu saque nao ser travado.",
+  },
+];
+
 const HOW_IT_WORKS = [
 
   {
