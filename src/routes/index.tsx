@@ -490,8 +490,15 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-8 text-center text-xs tracking-wide text-muted-foreground">pagamento único</p>
-              <CTAButton href={plan.href} variant={plan.variant} block className="mt-2">
+              <div className="mt-8 text-center">
+                <p className="font-display text-5xl font-extrabold tracking-tight text-foreground">
+                  {plan.price}
+                </p>
+                <p className="font-display mt-1 text-xs font-semibold uppercase tracking-[0.25em] text-muted-foreground">
+                  pagamento único
+                </p>
+              </div>
+              <CTAButton href={plan.href} variant={plan.variant} block className="mt-6">
                 {plan.cta}
               </CTAButton>
             </article>
