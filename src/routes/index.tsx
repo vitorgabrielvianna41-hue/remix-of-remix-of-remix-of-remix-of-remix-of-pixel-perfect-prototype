@@ -301,7 +301,7 @@ function Index() {
                 className="mt-8 w-full max-w-xl rounded-2xl border border-border shadow-neon"
               />
               <CTAButton href="#checkout-essencial" variant="red" size="lg" className="mt-8 w-fit">
-                QUERO O ACESSO DO METODO POR 17,90
+                QUERO O ACESSO DO METODO AGORA
               </CTAButton>
               <div className="mt-6 max-w-xl rounded-2xl border border-destructive/40 bg-surface-2 p-6">
                 <p className="font-display text-center text-base tracking-wide text-destructive">
