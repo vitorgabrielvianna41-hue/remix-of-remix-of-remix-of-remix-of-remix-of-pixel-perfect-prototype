@@ -559,5 +559,66 @@ function Index() {
         </Accordion>
       </Section>
     </main>
+
+    {/* Rodapé de confiança */}
+    <footer className="border-t border-border bg-surface-2/60">
+      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              icon: ShieldCheck,
+              title: "Compra 100% segura",
+              text: "Pagamento processado em ambiente seguro e criptografado.",
+            },
+            {
+              icon: Zap,
+              title: "Acesso imediato",
+              text: "O material é liberado automaticamente após a confirmação do pagamento.",
+            },
+            {
+              icon: Mail,
+              title: "Acesso no seu e-mail",
+              text: "Fique de olho na caixa de entrada e na pasta de spam ou promoções.",
+            },
+            {
+              icon: CheckCircle2,
+              title: "Garantia de 30 dias",
+              text: "Se não for para você, o reembolso é total, sem burocracia.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-xl border border-border bg-card/60 p-5 text-center"
+            >
+              <item.icon
+                className="mx-auto size-6 text-primary"
+                aria-hidden="true"
+              />
+              <h3 className="mt-3 text-sm font-semibold uppercase tracking-wide">
+                {item.title}
+              </h3>
+              <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 space-y-2 text-center text-xs leading-relaxed text-muted-foreground">
+          <p>
+            O Método CPA Chinês é um produto 100% digital — nada é enviado pelos correios.
+          </p>
+          <p>
+            Este material tem caráter educativo. Os resultados podem variar de pessoa para pessoa e
+            dependem da aplicação do método por cada aluno.
+          </p>
+          <p>
+            A venda é realizada de forma independente e não possui vínculo com casas de apostas ou
+            plataformas citadas no conteúdo.
+          </p>
+          <p className="pt-2 font-medium text-foreground/70">
+            © {new Date().getFullYear()} Método CPA Chinês. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 }
