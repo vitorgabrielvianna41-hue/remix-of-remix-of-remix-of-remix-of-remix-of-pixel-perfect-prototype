@@ -63,34 +63,6 @@ const DELIVERY_STEPS = [
   },
 ];
 
-const DELIVERABLES = [
-  {
-    icon: BookOpen,
-    title: "GUIA PRINCIPAL - METODO CPA",
-    text: "Como escolher casas, bônus e requisitos.",
-  },
-  {
-    icon: ListChecks,
-    title: "Checklist de análise",
-    text: "Itens para conferir antes de qualquer depósito.",
-  },
-  {
-    icon: Calculator,
-    title: "Planilha de cálculo",
-    text: "Compare depósito, rollover, limite de saque e risco potencial.",
-  },
-  {
-    icon: BookOpen,
-    title: "Guia de termos",
-    text: "Entenda rollover, odd, elegibilidade, wagering, cashback e limite de saque.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Checklist de segurança",
-    text: "Como verificar plataforma, domínio, suporte e regras de retirada.",
-  },
-];
-
 const PLANS = [
   {
     name: "Plano Essencial",
