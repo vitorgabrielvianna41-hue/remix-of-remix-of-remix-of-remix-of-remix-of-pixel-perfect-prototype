@@ -156,26 +156,36 @@ const TESTIMONIAL_SHOTS = [
   { src: depoimentoWhatsapp4.url, alt: "Depoimento de aluno acompanhando os resultados do método" },
 ];
 
-const FAQ = [
+const PAIN_POINTS = [
   {
-    q: "Vou conseguir sacar o bônus?",
-    a: "Sim, desde que você cumpra todas as regras da promoção, passe pela verificação da conta e respeite os limites e as políticas da plataforma. O saque está sujeito às condições estabelecidas pela própria plataforma.",
+    emoji: "🎰",
+    title: "Já perdeu dinheiro tentando a sorte em bets e cassinos",
+    text: "Colocou o seu dinheirinho na esperança de multiplicar, viu a banca zerar em minutos na sorte e ficou com aquele sentimento horrível de ter rasgado dinheiro.",
   },
   {
-    q: "Posso perder o dinheiro depositado?",
-    a: "Não, com o nosso metodo, a taxa de perca é 0%.",
+    emoji: "💸",
+    title: "Está cansado de chegar no final do mês sem um tostão no bolso",
+    text: "Trabalha ou faz bicos, mas a grana nunca rende, você não consegue comprar o que quer e a conta no banco está sempre no vermelho.",
   },
   {
-    q: "Preciso apostar para liberar o bônus?",
-    a: "Em muitas promoções existem requisitos de rollover ou volume mínimo. O valor varia conforme as regras de cada oferta e deve ser conferido antes do depósito.",
+    emoji: "📉",
+    title: "Já tentou de tudo na internet e só jogou tempo (e dinheiro) fora",
+    text: "Comprou salas de sinais, cursinhos caros ou acreditou em promessas fáceis que só serviram para tirar o pouco que você tinha.",
   },
   {
-    q: "Posso usar várias contas?",
-    a: "Pode, mas com sabedoria pro seu saque nao ser travado.",
+    emoji: "📱",
+    title: "Vê todo mundo da sua idade fazendo grana online e se sente estagnado",
+    text: "Rolou o feed do Instagram ou TikTok vendo a galera da sua idade lucrando todo dia enquanto você continua preso na mesma rotina sem sair do lugar.",
+  },
+  {
+    emoji: "🛑",
+    title: "Tem medo de arriscar o pouco que tem e cair em mais uma furada",
+    text: "Quer uma forma de ter renda de verdade, mas fica com o pé atrás porque não aguenta mais perder dinheiro em coisas que não funcionam.",
   },
 ];
 
 const HOW_IT_WORKS = [
+
   {
     icon: FileSearch,
     title: "1️⃣ CRIANDO A CONTA MÃE",
@@ -328,15 +338,44 @@ function Index() {
         </Section>
       </div>
 
-      {/* O QUE É O MÉTODO CPA CHINÊS */}
-      <Section id="o-que-e">
-        <SectionTitle>O QUE É O METODO CPA CHINÊS?</SectionTitle>
-        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-          O CPA (Custo Por Aquisição) é um método focado em estratégias de autoconvite dentro de
-          plataformas chinesas. Em vez de depender de terceiros para indicar, você aplica a
-          estrutura para ser o seu próprio depositante e liberar comissões das casas chinesas.
+      {/* VOCÊ SE IDENTIFICA? */}
+      <Section id="identifica">
+        <div className="text-center">
+          <span className="font-display inline-block rounded-full bg-destructive px-4 py-1.5 text-xs tracking-widest text-destructive-foreground">
+            VOCÊ SE IDENTIFICA?
+          </span>
+          <h2 className="mt-5 text-3xl leading-[1.05] sm:text-5xl">
+            ALGUMA DESSAS SITUAÇÕES
+            <br />
+            <span className="bg-neon-gradient bg-clip-text text-transparent">
+              JÁ ACONTECEU COM VOCÊ?
+            </span>
+          </h2>
+        </div>
+        <div className="mx-auto mt-10 flex max-w-3xl flex-col gap-4">
+          {PAIN_POINTS.map((item) => (
+            <article
+              key={item.emoji}
+              className="flex items-start gap-4 rounded-xl border border-border bg-card p-5 shadow-card transition-colors hover:border-primary/50"
+            >
+              <span
+                aria-hidden="true"
+                className="inline-flex size-11 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-xl"
+              >
+                {item.emoji}
+              </span>
+              <div>
+                <h3 className="font-semibold">{item.title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="font-display mt-10 text-center text-lg tracking-wide sm:text-xl">
+          👉 SE VOCÊ MARCOU PELO MENOS 1 — ESTE GUIA FOI FEITO PARA VOCÊ.
         </p>
       </Section>
+
 
       {/* COMO FUNCIONA O METODO */}
       <Section id="como-funciona" className="bg-surface">
