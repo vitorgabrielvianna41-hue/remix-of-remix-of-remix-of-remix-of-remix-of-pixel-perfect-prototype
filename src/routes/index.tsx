@@ -44,24 +44,6 @@ const CTA = {
   complete: "QUERO O PLANO COMPLETO",
 };
 
-const DELIVERY_STEPS = [
-  {
-    icon: CheckCircle2,
-    title: "PAGAMENTO APROVADO",
-    text: "Assim que o pagamento é confirmado, o sistema libera o seu acesso automaticamente.",
-  },
-  {
-    icon: Mail,
-    title: "E-MAIL COM O ACESSO",
-    text: "Você recebe no seu e-mail (o mesmo usado na compra) o link de acesso ao guia, às vídeo-aulas e à planilha.",
-  },
-  {
-    icon: Zap,
-    title: "ACESSO IMEDIATO",
-    text: "Também é possível abrir todo o conteúdo na hora, na tela que aparece logo após a confirmação do pagamento.",
-  },
-];
-
 const PLANS = [
   {
     name: "Plano Essencial",
@@ -558,31 +540,6 @@ function Index() {
             </p>
           </div>
         </div>
-      </Section>
-
-      {/* COMO VOCÊ RECEBE O PRODUTO */}
-      <Section className="bg-surface">
-        <SectionTitle>COMO VOCÊ RECEBE O PRODUTO</SectionTitle>
-        <ol className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {DELIVERY_STEPS.map((step, i) => (
-            <li
-              key={step.title}
-              className="relative rounded-xl border border-border bg-surface-2 p-6 shadow-card"
-            >
-              <span className="font-display text-5xl text-stroke-neon">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <step.icon className="mt-4 size-6 text-primary" aria-hidden="true" />
-              <h3 className="mt-3 text-lg">{step.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{step.text}</p>
-            </li>
-          ))}
-        </ol>
-        <p className="mt-8 text-center text-sm text-muted-foreground">
-          O produto é 100% digital — nada é enviado pelos correios. Fique atento à caixa de entrada e
-          à pasta de spam ou promoções do seu e-mail. Qualquer dúvida no acesso, é só chamar o
-          suporte.
-        </p>
       </Section>
 
       {/* FAQ */}
