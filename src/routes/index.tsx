@@ -560,8 +560,8 @@ function Index() {
         </Accordion>
       </Section>
     </main>
-    </>
-  );
+
+    {/* Rodapé de confiança */}
     <footer className="border-t border-border bg-surface-2/60">
       <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -621,5 +621,6 @@ function Index() {
         </div>
       </div>
     </footer>
+    </>
   );
 }
