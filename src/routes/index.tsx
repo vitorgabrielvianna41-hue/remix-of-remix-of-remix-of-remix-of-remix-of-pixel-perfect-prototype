@@ -490,7 +490,8 @@ function Index() {
                   </li>
                 ))}
               </ul>
-              <CTAButton href={plan.href} variant={plan.variant} block className="mt-8">
+              <p className="mt-8 text-center text-xs tracking-wide text-muted-foreground">pagamento único</p>
+              <CTAButton href={plan.href} variant={plan.variant} block className="mt-2">
                 {plan.cta}
               </CTAButton>
             </article>
