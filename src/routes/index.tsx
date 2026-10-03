@@ -288,7 +288,7 @@ function Index() {
         <div className="absolute inset-0 grid-lines opacity-70" aria-hidden="true" />
         <Section className="relative">
           <div className="max-w-3xl">
-            <Eyebrow>APRENDA CPA CHINES AGORA!</Eyebrow>
+            <Eyebrow>+1.221 PESSOAS JÁ TIVERAM RESULTADO</Eyebrow>
             <h1 className="mt-6 text-4xl leading-[0.92] sm:text-6xl md:text-7xl">
               Enriqueça Agora Com O Novo{" "}
               <span className="bg-neon-gradient bg-clip-text text-transparent">
