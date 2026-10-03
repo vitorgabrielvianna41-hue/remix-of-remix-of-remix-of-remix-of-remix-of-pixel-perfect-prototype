@@ -349,10 +349,33 @@ function Index() {
               <CTAButton href="#checkout-essencial" variant="red" size="lg" className="mt-8 w-fit">
                 QUERO O ACESSO DO METODO POR 17,90
               </CTAButton>
-            <p className="mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-              Entenda como funciona o CPA Chinês, conheça a estratégia por trás do método e veja
-              como aplicá-la e ganhar muito dinheiro.
-            </p>
+              <div className="mt-6 max-w-xl rounded-2xl border border-destructive/40 bg-surface-2 p-6">
+                <p className="font-display text-center text-base tracking-wide text-destructive">
+                  COMO VOCÊ RECEBE O GUIA DIGITAL?
+                </p>
+                <ul className="mt-4 space-y-3">
+                  {[
+                    { icon: "📧", text: "Comprou? Você recebe o guia digital no seu e-mail em menos de 2 minutos" },
+                    { icon: "📲", text: "Clica e abre o guia direto no celular — sem baixar nada na loja" },
+                    { icon: "✅", text: "É só usar — funciona no seu celular, até sem sinal de internet" },
+                  ].map((row) => (
+                    <li
+                      key={row.text}
+                      className="flex items-center gap-3 rounded-lg bg-card/70 px-4 py-3"
+                    >
+                      <span aria-hidden="true" className="text-lg">
+                        {row.icon}
+                      </span>
+                      <span className="text-sm font-semibold text-foreground">{row.text}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-center font-display text-xs tracking-wider text-destructive">
+                  ✓ ACESSO IMEDIATO&nbsp;&nbsp;✓ FUNCIONA OFFLINE&nbsp;&nbsp;✓ ATUALIZAÇÕES
+                  GRATUITAS&nbsp;&nbsp;✓ SUPORTE VIP
+                </p>
+              </div>
+
           </div>
         </Section>
       </div>
