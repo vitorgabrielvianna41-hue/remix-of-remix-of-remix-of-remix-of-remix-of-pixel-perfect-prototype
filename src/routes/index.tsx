@@ -475,9 +475,6 @@ function Index() {
         </div>
       </Section>
 
-          ))}
-        </div>
-      </Section>
 
       {/* BÔNUS DO PLANO COMPLETO */}
       <Section id="bonus">
