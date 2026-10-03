@@ -44,24 +44,6 @@ const CTA = {
   complete: "QUERO O PLANO COMPLETO",
 };
 
-const DELIVERY_STEPS = [
-  {
-    icon: CheckCircle2,
-    title: "PAGAMENTO APROVADO",
-    text: "Assim que o pagamento é confirmado, o sistema libera o seu acesso automaticamente.",
-  },
-  {
-    icon: Mail,
-    title: "E-MAIL COM O ACESSO",
-    text: "Você recebe no seu e-mail (o mesmo usado na compra) o link de acesso ao guia, às vídeo-aulas e à planilha.",
-  },
-  {
-    icon: Zap,
-    title: "ACESSO IMEDIATO",
-    text: "Também é possível abrir todo o conteúdo na hora, na tela que aparece logo após a confirmação do pagamento.",
-  },
-];
-
 const PLANS = [
   {
     name: "Plano Essencial",
@@ -292,6 +274,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 
 function Index() {
   return (
+    <>
     <main className="min-h-screen overflow-x-hidden bg-background">
       {/* FAIXA - TOPO */}
       <div className="border-b border-primary/30 bg-primary/10 py-3">
@@ -560,31 +543,6 @@ function Index() {
         </div>
       </Section>
 
-      {/* COMO VOCÊ RECEBE O PRODUTO */}
-      <Section className="bg-surface">
-        <SectionTitle>COMO VOCÊ RECEBE O PRODUTO</SectionTitle>
-        <ol className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {DELIVERY_STEPS.map((step, i) => (
-            <li
-              key={step.title}
-              className="relative rounded-xl border border-border bg-surface-2 p-6 shadow-card"
-            >
-              <span className="font-display text-5xl text-stroke-neon">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <step.icon className="mt-4 size-6 text-primary" aria-hidden="true" />
-              <h3 className="mt-3 text-lg">{step.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{step.text}</p>
-            </li>
-          ))}
-        </ol>
-        <p className="mt-8 text-center text-sm text-muted-foreground">
-          O produto é 100% digital — nada é enviado pelos correios. Fique atento à caixa de entrada e
-          à pasta de spam ou promoções do seu e-mail. Qualquer dúvida no acesso, é só chamar o
-          suporte.
-        </p>
-      </Section>
-
       {/* FAQ */}
       <Section id="faq">
         <SectionTitle>Perguntas frequentes</SectionTitle>
@@ -602,5 +560,67 @@ function Index() {
         </Accordion>
       </Section>
     </main>
+
+    {/* Rodapé de confiança */}
+    <footer className="border-t border-border bg-surface-2/60">
+      <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              icon: ShieldCheck,
+              title: "Compra 100% segura",
+              text: "Pagamento processado em ambiente seguro e criptografado.",
+            },
+            {
+              icon: Zap,
+              title: "Acesso imediato",
+              text: "O material é liberado automaticamente após a confirmação do pagamento.",
+            },
+            {
+              icon: Mail,
+              title: "Acesso no seu e-mail",
+              text: "Fique de olho na caixa de entrada e na pasta de spam ou promoções.",
+            },
+            {
+              icon: CheckCircle2,
+              title: "Garantia de 30 dias",
+              text: "Se não for para você, o reembolso é total, sem burocracia.",
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="rounded-xl border border-border bg-card/60 p-5 text-center"
+            >
+              <item.icon
+                className="mx-auto size-6 text-primary"
+                aria-hidden="true"
+              />
+              <h3 className="mt-3 text-sm font-semibold uppercase tracking-wide">
+                {item.title}
+              </h3>
+              <p className="mt-1 text-sm text-muted-foreground">{item.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 space-y-2 text-center text-xs leading-relaxed text-muted-foreground">
+          <p>
+            O Método CPA Chinês é um produto 100% digital — nada é enviado pelos correios.
+          </p>
+          <p>
+            Este material tem caráter educativo. Os resultados podem variar de pessoa para pessoa e
+            dependem da aplicação do método por cada aluno.
+          </p>
+          <p>
+            A venda é realizada de forma independente e não possui vínculo com casas de apostas ou
+            plataformas citadas no conteúdo.
+          </p>
+          <p className="pt-2 font-medium text-foreground/70">
+            © {new Date().getFullYear()} Método CPA Chinês. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    </>
   );
 }
