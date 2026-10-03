@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  BookOpen,
   Calculator,
   CheckCircle2,
   FileSearch,
