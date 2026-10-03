@@ -270,6 +270,19 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
   );
 }
 
+function CheckoutCTA() {
+  return (
+    <div className="mt-12 text-center">
+      <p className="font-display text-sm tracking-widest text-primary">
+        ⬇️ APROVEITE A CONDIÇÃO DE HOJE
+      </p>
+      <CTAButton href="#checkout-essencial" variant="red" size="lg" className="mt-4 w-fit">
+        QUERO GARANTIR MEU ACESSO AGORA
+      </CTAButton>
+    </div>
+  );
+}
+
 /* ---------------- Página ---------------- */
 
 function Index() {
@@ -392,6 +405,8 @@ function Index() {
         </div>
       </Section>
 
+      <CheckoutCTA />
+
       {/* VEJA COMO SÃO OS TÓPICOS POR DENTRO */}
       <Section id="topicos">
         <SectionTitle>VEJA COMO SÃO OS TÓPICOS POR DENTRO:</SectionTitle>
@@ -457,6 +472,8 @@ function Index() {
           ))}
         </div>
       </Section>
+
+      <CheckoutCTA />
 
       {/* OFERTA */}
       <Section id="oferta" className="bg-surface">
@@ -547,6 +564,8 @@ function Index() {
           </div>
         </div>
       </Section>
+
+      <CheckoutCTA />
 
       {/* FAQ */}
       <Section id="faq">
